@@ -128,5 +128,161 @@ notas = {'1ºTrimestre': 8.5, '2º Semestre': 9.5, '3º Trimestre': 7}
 
 # print(qualitativo(8))
 
+#Escreva um Código que lê a lista abaixo e faça: 
+#   A leitura do tamanho da lista. 
+#   A leitura do maior e menor valor
+#   A soma dos valores da lista
 
+# lista = [16, 14, 63, 105, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 8, 25, 66]
+# maior = 0
+# menor = 0
+# soma = 0
+# contador = 0
+
+# for elemento in lista:
+
+#     soma += elemento
+
+#     if(maior == 0 and menor == 0):
+#         maior = elemento
+#         menor = elemento
+#     elif(elemento > maior):
+#         maior = elemento
+#     elif(elemento < menor):
+#         menor = elemento    
+
+# print(f"A lista possui {len(lista)} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores presentes nela é igual a {soma}")
+
+# Escreva uma função que gere a tabuada de um número inteiro de 1 a 10, de acordo com a escolha da pessoa usuária. Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:
+
+# numeroEscolhido = int(input("Digite a tabuada desejada: "))
+
+# def geraTabuada(numTabuada):
+#     for i in range(11):
+
+#         print(f"{numeroEscolhido} X {i} = ", numeroEscolhido * i)
+
+# geraTabuada(numeroEscolhido)
     
+# Crie a função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
+
+# array = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+# mult_3 = [None] * 12
+
+
+# def multiplosTres(array):
+    
+#     contador = 0
+
+#     for i in array:
+#         mult_3[contador] = i * 3
+#         contador+=1
+    
+#     return mult_3
+
+# print(multiplosTres(array))
+
+# Crie uma lista dos quadrados dos números da seguinte lista [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]. Lembre-se de utilizar as funções lambda e map() para calcular o quadrado de cada elemento da lista.
+
+# array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# quadrados_iterador = map(lambda x: x * 2, array)
+# quadrados = list(quadrados_iterador)
+
+
+# print(quadrados)
+
+# Para atender a uma demanda de uma instituição de ensino para a análise do desempenho de seus(suas) estudantes, você precisa criar uma função que receba uma lista de 4 notas e retorne:
+
+# maior nota
+# menor nota
+# média
+# situação (Aprovado(a) ou Reprovado(a))
+
+# def analiseDesempenho():
+
+#     notas = [None] * 4
+#     maior = None
+#     menor = None
+#     soma = 0
+#     media = 0
+#     qtdNotas = len(notas)
+
+#     for nota in notas:
+#         nota = int(input("Digite a nota: "))
+
+#         if(maior == None and menor == None): 
+#             maior = nota
+#             menor = nota
+#         elif(nota > maior):
+#             maior = nota
+#         elif(nota < menor):
+#             menor = nota
+
+#         soma += nota
+    
+#     media = soma/qtdNotas
+#     situacao = "Aprovado" if media >= 5 else "Reprovado"
+
+#     return f"A média do aluno é {media}, ele se encontra {situacao}. A maior nota é: {maior} e a  menor nota é: {menor}"
+
+# print(analiseDesempenho())
+
+# Você recebeu uma demanda para tratar 2 listas com os nomes e sobrenomes de cada estudante concatenando-as para apresentar seus nomes completos na forma Nome Sobrenome. As listas são:
+
+# nomes = ["joão", "MaRia", "JOSÉ"]
+# sobrenomes = ["SILVA", "souza", "Tavares"]
+
+
+# def unirNomeSobrenome(arrayNome, arraySobrenome):
+#     nomeCompleto = []
+    
+
+#     for indice , nome in enumerate(arrayNome) :
+#         nomeCompleto.append(f"{nome} {arraySobrenome[indice]}")
+
+        
+        
+#     return nomeCompleto
+
+# print(unirNomeSobrenome(nomes, sobrenomes))
+        
+# gols_marcados = [2, 1, 3, 1, 0]
+# gols_sofridos = [1, 2, 2, 1, 3]
+
+# def identificarVencedor(marcados, sofridos):
+
+#     resultados = []
+
+#     for indice, (marcado, sofrido) in enumerate(zip(marcados, sofridos)):
+        
+#         status = "Ganhou a partida" if marcado > sofrido else "Empatou a partida" if marcado == sofrido else "Perdeu a partida"
+
+#         resultados.append(status)
+
+#     return resultados    
+
+# print(identificarVencedor(gols_marcados, gols_sofridos))
+
+# Você iniciou um estágio em uma empresa que trabalha com processamento de linguagem natural (NLP). Sua líder requisitou que você criasse um trecho de código que recebe uma frase digitada pela pessoa usuária e filtre apenas as palavras com tamanho maior ou igual a 5, exibindo-as em uma lista. Essa demanda é voltada para a análise do padrão de comportamento de pessoas na escrita de palavras acima dessa quantidade de caracteres.
+
+frase = "Aprender Python aqui na Alura é muito bom" 
+
+
+def identificarQtdLetras(frase):
+    
+    palavras = frase.split()
+    palvrasComMaisDeCincoLetras = []
+
+    for  palavra in palavras:
+        for indice, letra in enumerate(palavra):
+            indice += 1
+
+            if(indice >= 5):
+                palvrasComMaisDeCincoLetras.append(palavra)
+            
+    return palvrasComMaisDeCincoLetras
+ 
+# print(identificarQtdLetras(frase))
+
+print(identificarQtdLetras(frase))
